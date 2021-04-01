@@ -1,5 +1,5 @@
 //server npx json-server --watch data/db.json --port 8000
-//Finished # 24
+//Finished # 24-22
 import React from 'react';
 
 import Navbar from './Navbar';
