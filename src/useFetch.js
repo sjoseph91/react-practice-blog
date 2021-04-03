@@ -7,7 +7,9 @@ const useFetch = (url) => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
+
         const abortCont = new AbortController();
+        //associates this abort controller with a specific DOM or fetch request
         fetch(url, { signal: abortCont.signal})
         .then(res => {
             if(!res.ok){
@@ -31,6 +33,7 @@ const useFetch = (url) => {
             }
            
         })
+        //cleanup function
         return () => abortCont.abort();
     }
     
