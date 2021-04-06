@@ -39,6 +39,13 @@ Lesson 24 use Cleanup. An erro occurred when I quickly switched from my home com
   This was because the fetch did not complete, and it thrown an error. To stop this from happening we need to associate 
   that fetch with a new Abort Controller const abortCont = new AbortController();
   fetch(url, { signal: abortCont.signal})
-  , and when cleaning up the use effect hook, we need to return return () => abortCont.abort();
+  , and when cleaning up the use effect hook, we need to return return () => abortCont.abort()
+  
+  Lesson25: Route parameters- the blog details page needed access to the route parameter so we imported useParams hook and 
+    were able to access the id that way.
+  Lesson 26:
+    We reused our custom hook in the blog details page. Imported it and then destructured the data, isPending, and error.
+    We conditionally rendered those components and added styles
+  Lesson 27 - 28 set up Controlled form
 
 */
